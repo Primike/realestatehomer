@@ -14,9 +14,10 @@
 		9E0175282A154F5700FD473A /* Simpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175272A154F5700FD473A /* Simpsons.swift */; };
 		9E01752A2A1553F600FD473A /* Fixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175292A1553F600FD473A /* Fixes.swift */; };
 		9E01752D2A15593D00FD473A /* SimpsonsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752C2A15593D00FD473A /* SimpsonsDataManager.swift */; };
-		9E0175302A155A9900FD473A /* SimpsonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752F2A155A9900FD473A /* SimpsonsViewController.swift */; };
+		9E0175302A155A9900FD473A /* SimpsonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752F2A155A9900FD473A /* SimpsonsListViewController.swift */; };
 		9E0175332A155AC600FD473A /* SimpsonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175322A155AC600FD473A /* SimpsonsViewModel.swift */; };
 		9E0175362A155B3300FD473A /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175352A155B3300FD473A /* URLs.swift */; };
+		9E9D2A642A15A07B001EDD52 /* SimpsonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A632A15A07B001EDD52 /* SimpsonsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,10 @@
 		9E0175272A154F5700FD473A /* Simpsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simpsons.swift; sourceTree = "<group>"; };
 		9E0175292A1553F600FD473A /* Fixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixes.swift; sourceTree = "<group>"; };
 		9E01752C2A15593D00FD473A /* SimpsonsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDataManager.swift; sourceTree = "<group>"; };
-		9E01752F2A155A9900FD473A /* SimpsonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsViewController.swift; sourceTree = "<group>"; };
+		9E01752F2A155A9900FD473A /* SimpsonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsListViewController.swift; sourceTree = "<group>"; };
 		9E0175322A155AC600FD473A /* SimpsonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsViewModel.swift; sourceTree = "<group>"; };
 		9E0175352A155B3300FD473A /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		9E9D2A632A15A07B001EDD52 /* SimpsonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				9E01752B2A15592200FD473A /* DataManager */,
 				9E0175312A155AB400FD473A /* ViewModel */,
 				9E01752E2A155A7100FD473A /* ViewControllers */,
+				9E9D2A622A15A066001EDD52 /* Views */,
 			);
 			path = RealEstateHomer;
 			sourceTree = "<group>";
@@ -106,7 +109,7 @@
 		9E01752E2A155A7100FD473A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E01752F2A155A9900FD473A /* SimpsonsViewController.swift */,
+				9E01752F2A155A9900FD473A /* SimpsonsListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +128,14 @@
 				9E0175352A155B3300FD473A /* URLs.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		9E9D2A622A15A066001EDD52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D2A632A15A07B001EDD52 /* SimpsonsTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0175302A155A9900FD473A /* SimpsonsViewController.swift in Sources */,
+				9E9D2A642A15A07B001EDD52 /* SimpsonsTableViewCell.swift in Sources */,
+				9E0175302A155A9900FD473A /* SimpsonsListViewController.swift in Sources */,
 				9E0175362A155B3300FD473A /* URLs.swift in Sources */,
 				9E0175142A154D2400FD473A /* ViewController.swift in Sources */,
 				9E0175332A155AC600FD473A /* SimpsonsViewModel.swift in Sources */,

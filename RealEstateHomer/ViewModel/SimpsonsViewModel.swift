@@ -31,7 +31,10 @@ class SimpsonsViewModel {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-            delegate.didUpdate()
+            
+            DispatchQueue.main.async {
+                delegate.didUpdate()
+            }
         }
     }
 }

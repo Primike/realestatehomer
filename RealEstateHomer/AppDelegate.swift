@@ -18,9 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         window.backgroundColor = .systemBackground
         
+        let splitvc = UISplitViewController(style: .doubleColumn)
         let viewModel = SimpsonsViewModel(dataManager: SimpsonsDataManager())
-    
-        window.rootViewController = SimpsonsViewController(viewModel: viewModel)
+        let viewController = SimpsonsListViewController(viewModel: viewModel)
+        
+        splitvc.viewControllers = [
+            UINavigationController(rootViewController: viewController),
+            UINavigationController(rootViewController: UIViewController()),
+        ]
+
+        
+        window.rootViewController = viewController
         self.window = window
         
         return true

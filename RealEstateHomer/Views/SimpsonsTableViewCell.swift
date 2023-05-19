@@ -23,9 +23,11 @@ class SimpsonsTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
         return label
     }()
-    
+
     func configure(name: String) {
         label.text = name
         
@@ -36,9 +38,9 @@ class SimpsonsTableViewCell: UITableViewCell {
         self.addSubview(label)
         
         NSLayoutConstraint.activate([
-            label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -10),
+            label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            label.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10)
+            label.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20)
         ])
     }
 }

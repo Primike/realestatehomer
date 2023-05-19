@@ -11,6 +11,7 @@ import UIKit
 class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     
     private(set) var viewModel: SimpsonsViewModel
+    weak var delegate: DetailsDelegate?
     
     init(viewModel: SimpsonsViewModel) {
         self.viewModel = viewModel
@@ -86,18 +87,21 @@ extension SimpsonsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        simpsonsCell.configure(name: viewModel.getCellName(for: indexPath))
         return simpsonsCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(view.bounds.height/5)
+        return CGFloat(view.bounds.height/15)
     }
 
 }
 
 extension SimpsonsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+        //passviewmodeldatafor simpson
+        delegate?.didSelect()
     }
 }
 

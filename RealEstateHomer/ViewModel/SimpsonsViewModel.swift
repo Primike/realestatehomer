@@ -37,4 +37,11 @@ class SimpsonsViewModel {
             }
         }
     }
+    
+    func getCellName(for indexPath: IndexPath) -> String {
+        var text = simpsons[indexPath.row].text
+        text = String(text.split(separator: "-")[0])
+        
+        return text
+    }
 }

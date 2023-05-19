@@ -11,25 +11,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var coordinator: SimpsonsCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         window.backgroundColor = .systemBackground
+        coordinator = SimpsonsCoordinator(window: window)
         
-        let splitvc = UISplitViewController(style: .doubleColumn)
-        let viewModel = SimpsonsViewModel(dataManager: SimpsonsDataManager())
-        let viewController = SimpsonsListViewController(viewModel: viewModel)
-        
-        splitvc.viewControllers = [
-            UINavigationController(rootViewController: viewController),
-            UINavigationController(rootViewController: UIViewController()),
-        ]
-
-        
-        window.rootViewController = viewController
         self.window = window
+        
+        coordinator?.start()
         
         return true
     }

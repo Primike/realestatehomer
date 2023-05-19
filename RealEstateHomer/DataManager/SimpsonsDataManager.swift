@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol HomerDataManaging {
+protocol SimpsonsDataManaging {
     func getSimpsons(url: URL?, completion: @escaping (Result<Simpsons, Error>) -> Void)
 }
 
-class SimpsonsDataManager: HomerDataManaging {
+class SimpsonsDataManager: SimpsonsDataManaging {
     
     func getSimpsons(url: URL?, completion: @escaping (Result<Simpsons, Error>) -> Void) {
         guard let url = url else { return }

@@ -8,35 +8,35 @@
 import Foundation
 import UIKit
 
-protocol DetailsDelegate: AnyObject {
-    func didSelect()
-}
-
-class SimpsonsCoordinator: DetailsDelegate {
+class SimpsonsCoordinator {
     
     var window: UIWindow?
+    var splitVC: UISplitViewController
 
     init(window: UIWindow?) {
         self.window = window
+        self.splitVC = SimpsonsSplitViewController()
     }
     
     func start() {
-        let splitvc = UISplitViewController(style: .doubleColumn)
         let dataManager = SimpsonsDataManager()
         let viewModel = SimpsonsViewModel(dataManager: dataManager)
-        let viewController = SimpsonsListViewController(viewModel: viewModel)
+        let simpsonsListVC = SimpsonsListViewController(viewModel: viewModel)
+        simpsonsListVC.coordinator = self
         
-        viewController.delegate = self
-        
-        splitvc.viewControllers = [
-            UINavigationController(rootViewController: viewController),
+        splitVC.viewControllers = [
+            UINavigationController(rootViewController: simpsonsListVC),
             UINavigationController(rootViewController: UIViewController()),
         ]
 
-        window?.rootViewController = splitvc
+        window?.rootViewController = splitVC
     }
     
-    func didSelect() {
-        
+    func didSelectRow(simpson: Simpson) {
+        //maybe not init a new one
+        let detailsViewModel = DetailsViewModel(simpson: simpson)
+        let detailsViewController = DetailsViewController(viewModel: detailsViewModel)
+        let detailsNavController = UINavigationController(rootViewController: detailsViewController)
+        splitVC.showDetailViewController(detailsNavController, sender: self)
     }
 }

@@ -21,6 +21,8 @@
 		9E9D2A662A15B5FC001EDD52 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */; };
 		9E9D2A682A15B64F001EDD52 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */; };
 		9E9D2A6B2A168F93001EDD52 /* SimpsonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6A2A168F93001EDD52 /* SimpsonsCoordinator.swift */; };
+		9E9D2A6D2A17E345001EDD52 /* SimpsonsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */; };
+		9E9D2A702A1829EA001EDD52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9D2A6F2A1829EA001EDD52 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		9E9D2A6A2A168F93001EDD52 /* SimpsonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCoordinator.swift; sourceTree = "<group>"; };
+		9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9D2A702A1829EA001EDD52 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +122,7 @@
 			children = (
 				9E01752F2A155A9900FD473A /* SimpsonsListViewController.swift */,
 				9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */,
+				9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +176,9 @@
 			dependencies = (
 			);
 			name = RealEstateHomer;
+			packageProductDependencies = (
+				9E9D2A6F2A1829EA001EDD52 /* Kingfisher */,
+			);
 			productName = RealEstateHomer;
 			productReference = 9E01750C2A154D2400FD473A /* RealEstateHomer.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 9E0175032A154D2400FD473A;
+			packageReferences = (
+				9E9D2A6E2A1829EA001EDD52 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9E01750D2A154D2400FD473A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9D2A6B2A168F93001EDD52 /* SimpsonsCoordinator.swift in Sources */,
+				9E9D2A6D2A17E345001EDD52 /* SimpsonsSplitViewController.swift in Sources */,
 				9E9D2A642A15A07B001EDD52 /* SimpsonsTableViewCell.swift in Sources */,
 				9E0175302A155A9900FD473A /* SimpsonsListViewController.swift in Sources */,
 				9E0175362A155B3300FD473A /* URLs.swift in Sources */,
@@ -435,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E9D2A6E2A1829EA001EDD52 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E9D2A6F2A1829EA001EDD52 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E9D2A6E2A1829EA001EDD52 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E0175042A154D2400FD473A /* Project object */;
 }

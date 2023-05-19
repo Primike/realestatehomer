@@ -10,10 +10,10 @@ import UIKit
 
 class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     
-    private(set) var viewModel: SimpsonsViewModel
-    weak var delegate: DetailsDelegate?
+    private(set) var viewModel: SimpsonsViewModeling
+    weak var coordinator: SimpsonsCoordinator?
     
-    init(viewModel: SimpsonsViewModel) {
+    init(viewModel: SimpsonsViewModeling) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
@@ -53,8 +53,8 @@ class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     
     private func setup() {
         view.backgroundColor = .white
+        navigationItem.title = "Simpsons List"
         
-        navigationItem.titleView = searchBar
         searchBar.delegate = self
         
         tableView.delegate = self
@@ -100,8 +100,11 @@ extension SimpsonsListViewController: UITableViewDataSource {
 extension SimpsonsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //passviewmodeldatafor simpson
-        delegate?.didSelect()
+        guard let simpson = viewModel.getSimpson(for: indexPath), let coordinator = coordinator else {
+            return
+        }
+        
+        coordinator.didSelectRow(simpson: simpson)
     }
 }
 

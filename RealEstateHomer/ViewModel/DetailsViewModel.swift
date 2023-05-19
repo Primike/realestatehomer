@@ -15,9 +15,14 @@ class DetailsViewModel {
     let url: String
     
     init(simpson: Simpson) {
-        self.image = simpson.icon.url
-        self.text = simpson.text
-        self.name = "Name"
+        let text = simpson.text.split(separator: " - ")
+
+        self.image = "https://ddg.kuriko.moe\(simpson.icon.url)"
+        self.name = String(text[0])
+        self.text = String(text[1])
         self.url = simpson.firstURL
+        
+        print(simpson)
+
     }
 }

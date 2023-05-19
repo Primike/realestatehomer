@@ -11,9 +11,17 @@ protocol SimpsonsViewModelDelegate: AnyObject {
     func didUpdate()
 }
 
-class SimpsonsViewModel {
+protocol SimpsonsViewModeling {
+    var simpsons: [Simpson] { get }
+    var delegate: SimpsonsViewModelDelegate? { get set }
+    func fetchData()
+    func getCellName(for indexPath: IndexPath) -> String
+    func getSimpson(for indexPath: IndexPath) -> Simpson?
+}
+
+class SimpsonsViewModel: SimpsonsViewModeling {
     
-    private let dataManager: SimpsonsDataManager
+    private let dataManager: SimpsonsDataManaging
     private(set) var simpsons = [Simpson]()
     weak var delegate: SimpsonsViewModelDelegate?
     
@@ -39,9 +47,13 @@ class SimpsonsViewModel {
     }
     
     func getCellName(for indexPath: IndexPath) -> String {
-        var text = simpsons[indexPath.row].text
-        text = String(text.split(separator: "-")[0])
+        let text = simpsons[indexPath.row].text
+        let name = String(text.split(separator: "-")[0])
         
-        return text
+        return name
+    }
+    
+    func getSimpson(for indexPath: IndexPath) -> Simpson? {
+        return simpsons[indexPath.row] 
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ShowSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+final class ShowSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()

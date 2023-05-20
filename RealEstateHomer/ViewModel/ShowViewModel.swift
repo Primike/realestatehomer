@@ -36,7 +36,7 @@ class ShowViewModel: ShowViewModeling {
     
     func fetchData() {
         guard let url = URL(string: urlString) else {
-            print("Error: Invalid URL")
+            print(CustomError.invalidURL)
             return
         }
         
@@ -68,6 +68,8 @@ class ShowViewModel: ShowViewModeling {
         return searchResults[indexPath.row]
     }
     
+    //MARK: Removes all non lowercase alphanumerical strings in searchText and text
+    //Could change the model with a pre-filtered variable to make this more efficient
     func getSearchResults(searchText: String) {
         if searchText.isEmpty {
             searchResults = personalities

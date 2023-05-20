@@ -14,10 +14,10 @@ protocol ShowDataManaging {
 class ShowDataManager: ShowDataManaging {
     
     func getShowData(url: URL, completion: @escaping (Result<ShowData, Error>) -> Void) {
-        fetchData(url: url, customError: NSError(domain: "", code: 0, userInfo: nil), completion: completion)
+        fetchData(url: url, customError: .noData, completion: completion)
     }
     
-    private func fetchData<T: Decodable>(url: URL?, customError: Error, completion: @escaping (Result<T, Error>) -> Void) {
+    private func fetchData<T: Decodable>(url: URL?, customError: CustomError, completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = url else {
             completion(.failure(customError))
             return

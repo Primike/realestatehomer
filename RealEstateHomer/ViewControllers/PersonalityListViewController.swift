@@ -83,7 +83,7 @@ extension PersonalityListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let personalityCell = tableView.dequeueReusableCell(withIdentifier: PersonalityTableViewCell.reuseID, for: indexPath) as? PersonalityTableViewCell else {
-            print("Unable to dequeue PersonalityTableViewCell")
+            print(CustomError.cellReuse)
             
             return UITableViewCell()
         }
@@ -101,6 +101,7 @@ extension PersonalityListViewController: UITableViewDataSource {
 extension PersonalityListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         guard let personality = viewModel.getPersonality(for: indexPath), let coordinator = coordinator else {
             return
         }

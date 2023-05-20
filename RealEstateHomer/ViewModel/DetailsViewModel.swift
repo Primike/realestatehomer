@@ -14,6 +14,7 @@ class DetailsViewModel {
     let text: String
     let url: String
     
+    //MARK: JSON data format requires this data manipulation
     init(personality: Personality) {
         let text = personality.text.split(separator: " - ")
 

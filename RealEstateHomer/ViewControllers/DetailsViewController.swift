@@ -81,6 +81,7 @@ class DetailsViewController: UIViewController {
         updateStackViewAxis(for: view.bounds.size)
     }
     
+    //MARK: Called when screen changes orientation
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
@@ -107,11 +108,12 @@ class DetailsViewController: UIViewController {
             detailsStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             detailsStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            imageView.widthAnchor.constraint(equalToConstant: 150),
-            imageView.heightAnchor.constraint(equalToConstant: 150),
-            
-            textStackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
-            textStackView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 1),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1),
+
+            name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
+            text.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
+
         ])
     }
 }

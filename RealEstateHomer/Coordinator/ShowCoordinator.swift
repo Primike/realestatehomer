@@ -39,6 +39,7 @@ class ShowCoordinator {
         window?.rootViewController = splitVC
     }
     
+    //MARK: Initializes a new view controller for splitvc
     func didSelectRow(personality: Personality) {
         let detailsViewModel = DetailsViewModel(personality: personality)
         let detailsViewController = DetailsViewController(viewModel: detailsViewModel)

@@ -14,6 +14,8 @@
 		9E01752D2A15593D00FD473A /* ShowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752C2A15593D00FD473A /* ShowDataManager.swift */; };
 		9E0175302A155A9900FD473A /* PersonalityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752F2A155A9900FD473A /* PersonalityListViewController.swift */; };
 		9E0175332A155AC600FD473A /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175322A155AC600FD473A /* ShowViewModel.swift */; };
+		9E2EF8922A18FF1000AF8E66 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EF8912A18FF1000AF8E66 /* CustomError.swift */; };
+		9E2EF8932A18FF7000AF8E66 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EF8912A18FF1000AF8E66 /* CustomError.swift */; };
 		9E9D2A642A15A07B001EDD52 /* PersonalityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A632A15A07B001EDD52 /* PersonalityTableViewCell.swift */; };
 		9E9D2A662A15B5FC001EDD52 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */; };
 		9E9D2A682A15B64F001EDD52 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */; };
@@ -46,13 +48,13 @@
 		9E01752C2A15593D00FD473A /* ShowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDataManager.swift; sourceTree = "<group>"; };
 		9E01752F2A155A9900FD473A /* PersonalityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityListViewController.swift; sourceTree = "<group>"; };
 		9E0175322A155AC600FD473A /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
+		9E2EF8912A18FF1000AF8E66 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		9E9D2A632A15A07B001EDD52 /* PersonalityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTableViewCell.swift; sourceTree = "<group>"; };
 		9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		9E9D2A6A2A168F93001EDD52 /* ShowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCoordinator.swift; sourceTree = "<group>"; };
 		9E9D2A6C2A17E345001EDD52 /* ShowSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSplitViewController.swift; sourceTree = "<group>"; };
 		9E9D2A752A1841BC001EDD52 /* RealEstateWire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealEstateWire.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E9D2A772A1841BC001EDD52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9D2A802A1841BD001EDD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E9D2A852A1841BD001EDD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E9D2A942A1849F6001EDD52 /* Homer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Homer.plist; path = RealEstateHomer/Files/Homer.plist; sourceTree = SOURCE_ROOT; };
@@ -164,6 +166,7 @@
 		9E0175342A155B1F00FD473A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9E2EF8912A18FF1000AF8E66 /* CustomError.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -187,7 +190,6 @@
 		9E9D2A762A1841BC001EDD52 /* RealEstateWire */ = {
 			isa = PBXGroup;
 			children = (
-				9E9D2A772A1841BC001EDD52 /* AppDelegate.swift */,
 				9E9D2A802A1841BD001EDD52 /* Assets.xcassets */,
 				9E9D2A852A1841BD001EDD52 /* Info.plist */,
 			);
@@ -314,6 +316,7 @@
 				9E9D2A6B2A168F93001EDD52 /* ShowCoordinator.swift in Sources */,
 				9E9D2A6D2A17E345001EDD52 /* ShowSplitViewController.swift in Sources */,
 				9E9D2A642A15A07B001EDD52 /* PersonalityTableViewCell.swift in Sources */,
+				9E2EF8922A18FF1000AF8E66 /* CustomError.swift in Sources */,
 				9E0175302A155A9900FD473A /* PersonalityListViewController.swift in Sources */,
 				9E0175332A155AC600FD473A /* ShowViewModel.swift in Sources */,
 				9E0175282A154F5700FD473A /* ShowData.swift in Sources */,
@@ -331,6 +334,7 @@
 				9E9D2A922A184822001EDD52 /* ShowSplitViewController.swift in Sources */,
 				9E9D2A932A184824001EDD52 /* PersonalityTableViewCell.swift in Sources */,
 				9E9D2A892A1847F6001EDD52 /* ShowData.swift in Sources */,
+				9E2EF8932A18FF7000AF8E66 /* CustomError.swift in Sources */,
 				9E9D2A8A2A1847FB001EDD52 /* AppDelegate.swift in Sources */,
 				9E9D2A8D2A184809001EDD52 /* ShowDataManager.swift in Sources */,
 				9E9D2A8E2A18480E001EDD52 /* ShowViewModel.swift in Sources */,

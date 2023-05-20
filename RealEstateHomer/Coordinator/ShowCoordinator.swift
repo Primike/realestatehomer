@@ -1,5 +1,5 @@
 //
-//  SimpsonsCoordinator.swift
+//  ShowCoordinator.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/18/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SimpsonsCoordinator {
+class ShowCoordinator {
     
     var window: UIWindow?
     var splitVC: UISplitViewController
@@ -17,15 +17,18 @@ class SimpsonsCoordinator {
     init(window: UIWindow?, urlString: String?) {
         self.window = window
         self.urlString = urlString
-        self.splitVC = SimpsonsSplitViewController()
+        self.splitVC = ShowSplitViewController()
     }
     
     func start() {
-        guard let urlString = urlString else { return }
+        guard let urlString = urlString else {
+            print("Error: url is nil")
+            return
+        }
         
-        let dataManager = SimpsonsDataManager()
-        let viewModel = SimpsonsViewModel(dataManager: dataManager, urlString: urlString)
-        let simpsonsListVC = SimpsonsListViewController(viewModel: viewModel)
+        let dataManager = ShowDataManager()
+        let viewModel = ShowViewModel(dataManager: dataManager, urlString: urlString)
+        let simpsonsListVC = PersonalityListViewController(viewModel: viewModel)
         simpsonsListVC.coordinator = self
         
         splitVC.viewControllers = [
@@ -36,9 +39,8 @@ class SimpsonsCoordinator {
         window?.rootViewController = splitVC
     }
     
-    func didSelectRow(simpson: Simpson) {
-        //maybe not init a new one
-        let detailsViewModel = DetailsViewModel(simpson: simpson)
+    func didSelectRow(personality: Personality) {
+        let detailsViewModel = DetailsViewModel(personality: personality)
         let detailsViewController = DetailsViewController(viewModel: detailsViewModel)
         let detailsNavController = UINavigationController(rootViewController: detailsViewController)
         splitVC.showDetailViewController(detailsNavController, sender: self)

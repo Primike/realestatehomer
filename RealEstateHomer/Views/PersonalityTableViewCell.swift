@@ -1,5 +1,5 @@
 //
-//  SimpsonsTableViewCell.swift
+//  PersonalityTableViewCell.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/17/23.
@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class SimpsonsTableViewCell: UITableViewCell {
-    static let reuseID = "SimpsonsCell"
+class PersonalityTableViewCell: UITableViewCell {
+    static let reuseID = "PersonalityCell"
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

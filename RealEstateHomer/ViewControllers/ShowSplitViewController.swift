@@ -1,5 +1,5 @@
 //
-//  SimpsonsSplitViewController.swift
+//  ShowSplitViewController.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/19/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SimpsonsSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+class ShowSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()

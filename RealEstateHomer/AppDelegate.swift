@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var coordinator: SimpsonsCoordinator?
+    var coordinator: ShowCoordinator?
     var urlString: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         window.backgroundColor = .systemBackground
         
-        coordinator = SimpsonsCoordinator(window: window, urlString: urlString)
+        coordinator = ShowCoordinator(window: window, urlString: urlString)
         
         self.window = window
         

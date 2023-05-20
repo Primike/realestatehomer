@@ -43,7 +43,7 @@ class DetailsViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
-        let placeholder = UIImage(named: "simpson")
+        let placeholder = UIImage(named: "default")
         
         if let url = URL(string: viewModel.image) {
             imageView.kf.setImage(with: url, placeholder: placeholder)
@@ -76,6 +76,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         layout()
         updateStackViewAxis(for: view.bounds.size)
     }

@@ -1,5 +1,5 @@
 //
-//  HomerDataManager.swift
+//  ShowDataManager.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/17/23.
@@ -7,14 +7,13 @@
 
 import Foundation
 
-protocol SimpsonsDataManaging {
-    func getSimpsons(url: URL?, completion: @escaping (Result<Simpsons, Error>) -> Void)
+protocol ShowDataManaging {
+    func getShowData(url: URL, completion: @escaping (Result<ShowData, Error>) -> Void)
 }
 
-class SimpsonsDataManager: SimpsonsDataManaging {
+class ShowDataManager: ShowDataManaging {
     
-    func getSimpsons(url: URL?, completion: @escaping (Result<Simpsons, Error>) -> Void) {
-        guard let url = url else { return }
+    func getShowData(url: URL, completion: @escaping (Result<ShowData, Error>) -> Void) {
         fetchData(url: url, customError: NSError(domain: "", code: 0, userInfo: nil), completion: completion)
     }
     

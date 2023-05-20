@@ -1,5 +1,5 @@
 //
-//  SimpsonsListViewController.swift
+//  PersonalityListViewControl.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/17/23.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
+class PersonalityListViewController: UIViewController, ShowViewModelDelegate {
     
-    private(set) var viewModel: SimpsonsViewModeling
-    weak var coordinator: SimpsonsCoordinator?
+    private(set) var viewModel: ShowViewModeling
+    weak var coordinator: ShowCoordinator?
     
-    init(viewModel: SimpsonsViewModeling) {
+    init(viewModel: ShowViewModeling) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
@@ -33,7 +33,7 @@ class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     lazy var searchBar: UISearchBar = {
         var searchBar = UISearchBar()
         searchBar.searchBarStyle = UISearchBar.Style.default
-        searchBar.placeholder = "Search Simpsons"
+        searchBar.placeholder = "Search"
         searchBar.sizeToFit()
         searchBar.isTranslucent = false
         return searchBar
@@ -42,25 +42,26 @@ class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        
+
         viewModel.fetchData()
     }
     
-    func didUpdate() {
+    func didFinishFetch() {
         setup()
         layout()
     }
     
     private func setup() {
         view.backgroundColor = .white
-        navigationItem.title = "Simpsons List"
+        navigationItem.title = "Character List"
         
+
         searchBar.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(SimpsonsTableViewCell.self, forCellReuseIdentifier: SimpsonsTableViewCell.reuseID)
+        tableView.register(PersonalityTableViewCell.self, forCellReuseIdentifier: PersonalityTableViewCell.reuseID)
     }
     
     private func layout() {
@@ -75,20 +76,20 @@ class SimpsonsListViewController: UIViewController, SimpsonsViewModelDelegate {
     }
 }
 
-extension SimpsonsListViewController: UITableViewDataSource {
+extension PersonalityListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.simpsons.count
+        return viewModel.searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let simpsonsCell = tableView.dequeueReusableCell(withIdentifier: SimpsonsTableViewCell.reuseID, for: indexPath) as? SimpsonsTableViewCell else {
-            print("Unable to dequeue SimpsonsTableViewCell")
+        guard let personalityCell = tableView.dequeueReusableCell(withIdentifier: PersonalityTableViewCell.reuseID, for: indexPath) as? PersonalityTableViewCell else {
+            print("Unable to dequeue PersonalityTableViewCell")
             
             return UITableViewCell()
         }
         
-        simpsonsCell.configure(name: viewModel.getCellName(for: indexPath))
-        return simpsonsCell
+        personalityCell.configure(name: viewModel.getCellName(for: indexPath))
+        return personalityCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -97,19 +98,21 @@ extension SimpsonsListViewController: UITableViewDataSource {
 
 }
 
-extension SimpsonsListViewController: UITableViewDelegate {
+extension PersonalityListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let simpson = viewModel.getSimpson(for: indexPath), let coordinator = coordinator else {
+        guard let personality = viewModel.getPersonality(for: indexPath), let coordinator = coordinator else {
             return
         }
         
-        coordinator.didSelectRow(simpson: simpson)
+        coordinator.didSelectRow(personality: personality)
     }
 }
 
-extension SimpsonsListViewController: UISearchBarDelegate {
+extension PersonalityListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        viewModel.getSearchResults(searchText: searchText)
+        
+        tableView.reloadData()
     }
 }

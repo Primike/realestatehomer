@@ -1,5 +1,5 @@
 //
-//  Simpsons.swift
+//  ShowData.swift
 //  RealEstateHomer
 //
 //  Created by Prince Avecillas on 5/17/23.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Simpsons: Decodable {
-    let relatedTopics: [Simpson]
+struct ShowData: Decodable {
+    let relatedTopics: [Personality]
 
     enum CodingKeys: String, CodingKey {
         case relatedTopics = "RelatedTopics"
     }
 }
 
-struct Simpson: Decodable {
+struct Personality: Decodable {
     let firstURL: String
     let icon: IconURL
     let text: String

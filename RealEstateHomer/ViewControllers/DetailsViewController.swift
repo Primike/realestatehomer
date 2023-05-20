@@ -59,11 +59,11 @@ class DetailsViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = viewModel.name
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.font = UIFont.italicSystemFont(ofSize: UIFont.preferredFont(forTextStyle: .largeTitle).pointSize)
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
-    
+
     lazy var text: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -105,14 +105,14 @@ class DetailsViewController: UIViewController {
         textStackView.addArrangedSubview(text)
         
         NSLayoutConstraint.activate([
-            detailsStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            detailsStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            detailsStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            detailsStackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
             
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1),
+            imageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.4),
+            imageView.heightAnchor.constraint(equalTo: imageView.safeAreaLayoutGuide.widthAnchor, multiplier: 1),
 
-            name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
-            text.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.45),
+            name.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.45),
+            text.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.45),
 
         ])
     }

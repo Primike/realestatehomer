@@ -12,15 +12,19 @@ class SimpsonsCoordinator {
     
     var window: UIWindow?
     var splitVC: UISplitViewController
+    var urlString: String?
 
-    init(window: UIWindow?) {
+    init(window: UIWindow?, urlString: String?) {
         self.window = window
+        self.urlString = urlString
         self.splitVC = SimpsonsSplitViewController()
     }
     
     func start() {
+        guard let urlString = urlString else { return }
+        
         let dataManager = SimpsonsDataManager()
-        let viewModel = SimpsonsViewModel(dataManager: dataManager)
+        let viewModel = SimpsonsViewModel(dataManager: dataManager, urlString: urlString)
         let simpsonsListVC = SimpsonsListViewController(viewModel: viewModel)
         simpsonsListVC.coordinator = self
         

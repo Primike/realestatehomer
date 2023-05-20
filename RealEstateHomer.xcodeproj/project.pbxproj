@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E0175102A154D2400FD473A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01750F2A154D2400FD473A /* AppDelegate.swift */; };
-		9E0175142A154D2400FD473A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175132A154D2400FD473A /* ViewController.swift */; };
 		9E0175192A154D2500FD473A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0175182A154D2500FD473A /* Assets.xcassets */; };
 		9E0175242A154D4500FD473A /* Simpson.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E0175232A154D4500FD473A /* Simpson.json */; };
 		9E0175282A154F5700FD473A /* Simpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175272A154F5700FD473A /* Simpsons.swift */; };
@@ -23,12 +22,26 @@
 		9E9D2A6B2A168F93001EDD52 /* SimpsonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6A2A168F93001EDD52 /* SimpsonsCoordinator.swift */; };
 		9E9D2A6D2A17E345001EDD52 /* SimpsonsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */; };
 		9E9D2A702A1829EA001EDD52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9D2A6F2A1829EA001EDD52 /* Kingfisher */; };
+		9E9D2A812A1841BD001EDD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D2A802A1841BD001EDD52 /* Assets.xcassets */; };
+		9E9D2A892A1847F6001EDD52 /* Simpsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175272A154F5700FD473A /* Simpsons.swift */; };
+		9E9D2A8A2A1847FB001EDD52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01750F2A154D2400FD473A /* AppDelegate.swift */; };
+		9E9D2A8B2A1847FF001EDD52 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175352A155B3300FD473A /* URLs.swift */; };
+		9E9D2A8C2A184807001EDD52 /* SimpsonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6A2A168F93001EDD52 /* SimpsonsCoordinator.swift */; };
+		9E9D2A8D2A184809001EDD52 /* SimpsonsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752C2A15593D00FD473A /* SimpsonsDataManager.swift */; };
+		9E9D2A8E2A18480E001EDD52 /* SimpsonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0175322A155AC600FD473A /* SimpsonsViewModel.swift */; };
+		9E9D2A8F2A184818001EDD52 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */; };
+		9E9D2A902A18481B001EDD52 /* SimpsonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01752F2A155A9900FD473A /* SimpsonsListViewController.swift */; };
+		9E9D2A912A18481F001EDD52 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A652A15B5FC001EDD52 /* DetailsViewController.swift */; };
+		9E9D2A922A184822001EDD52 /* SimpsonsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */; };
+		9E9D2A932A184824001EDD52 /* SimpsonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9D2A632A15A07B001EDD52 /* SimpsonsTableViewCell.swift */; };
+		9E9D2A952A1849F6001EDD52 /* Homer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D2A942A1849F6001EDD52 /* Homer.plist */; };
+		9E9D2A982A184BC1001EDD52 /* Wire.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9D2A962A184A3D001EDD52 /* Wire.plist */; };
+		9E9D2A9B2A18660A001EDD52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E9D2A9A2A18660A001EDD52 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E01750C2A154D2400FD473A /* RealEstateHomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealEstateHomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E01750F2A154D2400FD473A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E0175132A154D2400FD473A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E0175182A154D2500FD473A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E01751D2A154D2500FD473A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0175232A154D4500FD473A /* Simpson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Simpson.json; sourceTree = "<group>"; };
@@ -43,6 +56,12 @@
 		9E9D2A672A15B64F001EDD52 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		9E9D2A6A2A168F93001EDD52 /* SimpsonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCoordinator.swift; sourceTree = "<group>"; };
 		9E9D2A6C2A17E345001EDD52 /* SimpsonsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsSplitViewController.swift; sourceTree = "<group>"; };
+		9E9D2A752A1841BC001EDD52 /* RealEstateWire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealEstateWire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9D2A772A1841BC001EDD52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E9D2A802A1841BD001EDD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E9D2A852A1841BD001EDD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E9D2A942A1849F6001EDD52 /* Homer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Homer.plist; path = RealEstateHomer/Files/Homer.plist; sourceTree = SOURCE_ROOT; };
+		9E9D2A962A184A3D001EDD52 /* Wire.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Wire.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E9D2A722A1841BC001EDD52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9D2A9B2A18660A001EDD52 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,7 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				9E01750E2A154D2400FD473A /* RealEstateHomer */,
+				9E9D2A762A1841BC001EDD52 /* RealEstateWire */,
 				9E01750D2A154D2400FD473A /* Products */,
+				9E9D2A992A18660A001EDD52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9E01750C2A154D2400FD473A /* RealEstateHomer.app */,
+				9E9D2A752A1841BC001EDD52 /* RealEstateWire.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				9E0175232A154D4500FD473A /* Simpson.json */,
-				9E0175132A154D2400FD473A /* ViewController.swift */,
+				9E9D2A942A1849F6001EDD52 /* Homer.plist */,
+				9E9D2A962A184A3D001EDD52 /* Wire.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -160,6 +191,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		9E9D2A762A1841BC001EDD52 /* RealEstateWire */ = {
+			isa = PBXGroup;
+			children = (
+				9E9D2A772A1841BC001EDD52 /* AppDelegate.swift */,
+				9E9D2A802A1841BD001EDD52 /* Assets.xcassets */,
+				9E9D2A852A1841BD001EDD52 /* Info.plist */,
+			);
+			path = RealEstateWire;
+			sourceTree = "<group>";
+		};
+		9E9D2A992A18660A001EDD52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +231,26 @@
 			productReference = 9E01750C2A154D2400FD473A /* RealEstateHomer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9E9D2A742A1841BC001EDD52 /* RealEstateWire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E9D2A862A1841BD001EDD52 /* Build configuration list for PBXNativeTarget "RealEstateWire" */;
+			buildPhases = (
+				9E9D2A712A1841BC001EDD52 /* Sources */,
+				9E9D2A722A1841BC001EDD52 /* Frameworks */,
+				9E9D2A732A1841BC001EDD52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealEstateWire;
+			packageProductDependencies = (
+				9E9D2A9A2A18660A001EDD52 /* Kingfisher */,
+			);
+			productName = RealEstateWire;
+			productReference = 9E9D2A752A1841BC001EDD52 /* RealEstateWire.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,6 +262,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					9E01750B2A154D2400FD473A = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					9E9D2A742A1841BC001EDD52 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -215,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				9E01750B2A154D2400FD473A /* RealEstateHomer */,
+				9E9D2A742A1841BC001EDD52 /* RealEstateWire */,
 			);
 		};
 /* End PBXProject section */
@@ -224,8 +296,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9D2A952A1849F6001EDD52 /* Homer.plist in Resources */,
 				9E0175192A154D2500FD473A /* Assets.xcassets in Resources */,
 				9E0175242A154D4500FD473A /* Simpson.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E9D2A732A1841BC001EDD52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9D2A812A1841BD001EDD52 /* Assets.xcassets in Resources */,
+				9E9D2A982A184BC1001EDD52 /* Wire.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +323,6 @@
 				9E9D2A642A15A07B001EDD52 /* SimpsonsTableViewCell.swift in Sources */,
 				9E0175302A155A9900FD473A /* SimpsonsListViewController.swift in Sources */,
 				9E0175362A155B3300FD473A /* URLs.swift in Sources */,
-				9E0175142A154D2400FD473A /* ViewController.swift in Sources */,
 				9E0175332A155AC600FD473A /* SimpsonsViewModel.swift in Sources */,
 				9E0175282A154F5700FD473A /* Simpsons.swift in Sources */,
 				9E0175102A154D2400FD473A /* AppDelegate.swift in Sources */,
@@ -249,6 +330,24 @@
 				9E01752D2A15593D00FD473A /* SimpsonsDataManager.swift in Sources */,
 				9E01752A2A1553F600FD473A /* Fixes.swift in Sources */,
 				9E9D2A662A15B5FC001EDD52 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E9D2A712A1841BC001EDD52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9D2A922A184822001EDD52 /* SimpsonsSplitViewController.swift in Sources */,
+				9E9D2A8B2A1847FF001EDD52 /* URLs.swift in Sources */,
+				9E9D2A932A184824001EDD52 /* SimpsonsTableViewCell.swift in Sources */,
+				9E9D2A892A1847F6001EDD52 /* Simpsons.swift in Sources */,
+				9E9D2A8A2A1847FB001EDD52 /* AppDelegate.swift in Sources */,
+				9E9D2A8D2A184809001EDD52 /* SimpsonsDataManager.swift in Sources */,
+				9E9D2A8E2A18480E001EDD52 /* SimpsonsViewModel.swift in Sources */,
+				9E9D2A8F2A184818001EDD52 /* DetailsViewModel.swift in Sources */,
+				9E9D2A902A18481B001EDD52 /* SimpsonsListViewController.swift in Sources */,
+				9E9D2A8C2A184807001EDD52 /* SimpsonsCoordinator.swift in Sources */,
+				9E9D2A912A18481F001EDD52 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +474,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_PLIST = Files/Homer.plist;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDPY9LF665;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RealEstateHomer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RealEstateHomer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -403,10 +504,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_PLIST = Files/Homer.plist;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MDPY9LF665;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RealEstateHomer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RealEstateHomer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -418,6 +521,66 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Primike.RealEstateHomer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E9D2A872A1841BD001EDD52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_PLIST = Files/Wire.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDPY9LF665;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealEstateWire/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RealEstateWire;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Primike.RealEstateWire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E9D2A882A1841BD001EDD52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_PLIST = Files/Wire.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MDPY9LF665;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealEstateWire/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RealEstateWire;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Primike.RealEstateWire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,6 +609,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9E9D2A862A1841BD001EDD52 /* Build configuration list for PBXNativeTarget "RealEstateWire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E9D2A872A1841BD001EDD52 /* Debug */,
+				9E9D2A882A1841BD001EDD52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -461,6 +633,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		9E9D2A6F2A1829EA001EDD52 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E9D2A6E2A1829EA001EDD52 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		9E9D2A9A2A18660A001EDD52 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9E9D2A6E2A1829EA001EDD52 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;

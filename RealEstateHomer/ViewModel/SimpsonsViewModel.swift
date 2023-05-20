@@ -24,13 +24,17 @@ class SimpsonsViewModel: SimpsonsViewModeling {
     private let dataManager: SimpsonsDataManaging
     private(set) var simpsons = [Simpson]()
     weak var delegate: SimpsonsViewModelDelegate?
+    var urlString: String
     
-    init(dataManager: SimpsonsDataManager) {
+    init(dataManager: SimpsonsDataManager, urlString: String) {
         self.dataManager = dataManager
+        self.urlString = urlString
     }
     
     func fetchData() {
-        dataManager.getSimpsons(url: URLs.simpsons.value) { [weak self] (result) in
+        let url = URL(string: urlString)
+        
+        dataManager.getSimpsons(url: url) { [weak self] (result) in
             guard let self = self, let delegate = self.delegate else { return }
             
             switch result {
